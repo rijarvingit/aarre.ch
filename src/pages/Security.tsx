@@ -334,12 +334,12 @@ const Security = () => {
               transition={{ delay: 0.3, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <motion.button
-                onClick={() => { const url = window.location.origin + '/tenants/aarredigital/vanilla/gate.html'; window.location.href = url; }}
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                className="group relative px-10 py-4 bg-orange-600 border border-orange-200 rounded-full text-gray-900 font-semibold text-lg shadow-xl hover:bg-orange-700/30 hover:border-orange-200 hover:shadow-orange-700/50 transition-all cursor-pointer"
-              >
+              <a href="https://aarre.ch/tenants/aarredigital/vanilla/gate.html" target="_self">
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group relative px-10 py-4 bg-orange-600 border border-orange-200 rounded-full text-gray-900 font-semibold text-lg shadow-xl hover:bg-orange-700/30 hover:border-orange-200 hover:shadow-orange-700/50 transition-all cursor-pointer"
+                >
                   <span className="relative z-10 flex items-center gap-3">
                     Demo Access
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" strokeWidth={2} />
@@ -355,7 +355,8 @@ const Security = () => {
                       repeat: Infinity,
                     }}
                   />
-              </motion.button>
+                </motion.button>
+              </a>
             </motion.div>
           </motion.div>
         </div>

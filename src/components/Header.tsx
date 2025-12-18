@@ -54,12 +54,8 @@ const Header = () => {
 
             {/* Demo Access Button */}
             <a
-              onClick={(e) => {
-                e.preventDefault();
-                const url = window.location.origin + '/tenants/aarredigital/vanilla/gate.html';
-                window.location.href = url;
-              }}
-              href="#"
+              href="https://aarre.ch/tenants/aarredigital/vanilla/gate.html"
+              target="_self"
               className="ml-4 px-5 py-2 bg-orange-50 text-orange-600 font-semibold rounded-lg border border-orange-400 hover:bg-orange-100 hover:border-orange-500 transition-colors cursor-pointer"
             >
               Demo Access
@@ -110,13 +106,9 @@ const Header = () => {
 
                 {/* Demo Access Button (Mobile) */}
                 <a
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const url = window.location.origin + '/tenants/aarredigital/vanilla/gate.html';
-                    window.location.href = url;
-                    closeMobileMenu();
-                  }}
-                  href="#"
+                  href="https://aarre.ch/tenants/aarredigital/vanilla/gate.html"
+                  target="_self"
+                  onClick={closeMobileMenu}
                   className="block px-4 py-3 bg-orange-50 text-orange-600 font-semibold rounded-lg border border-orange-400 hover:bg-orange-100 hover:border-orange-500 transition-colors cursor-pointer text-center"
                 >
                   Demo Access

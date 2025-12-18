@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ProgressBar from '../components/ProgressBar';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ScrollArrow from '../components/ScrollArrow';
 
 const Technology = () => {
   return (
@@ -34,6 +35,11 @@ const Technology = () => {
             <p className="text-base text-gray-600 max-w-2xl mx-auto leading-relaxed mb-8">
               No vendor lock-in. Adapts to YOUR systems in weeks, not years.
             </p>
+
+            {/* Scroll Arrow */}
+            <div className="mt-8">
+              <ScrollArrow targetId="home" />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -106,6 +112,11 @@ const Technology = () => {
                   <p className="text-xs text-gray-600">GPT-4/Claude (optional upgrade)</p>
                 </motion.div>
               </div>
+            </div>
+
+            {/* Scroll Arrow */}
+            <div className="mt-8">
+              <ScrollArrow targetId="freedom" />
             </div>
           </motion.div>
         </div>
@@ -188,6 +199,11 @@ const Technology = () => {
                 <p className="text-xs text-gray-600">Modern component-based UI</p>
               </motion.div>
             </div>
+
+            {/* Scroll Arrow */}
+            <div className="mt-8">
+              <ScrollArrow targetId="memory" />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -213,6 +229,11 @@ const Technology = () => {
               in large deployments. Employee or executive leaves? Customer visits your site? Their written knowledge
               stays as long as you want—respecting of course all regulations and laws.
             </p>
+
+            {/* Scroll Arrow */}
+            <div className="mt-8">
+              <ScrollArrow targetId="hexagonal" />
+            </div>
           </motion.div>
         </div>
       </section>

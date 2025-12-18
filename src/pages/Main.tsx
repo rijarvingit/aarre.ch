@@ -5,6 +5,7 @@ import { useState } from 'react';
 import ProgressBar from '../components/ProgressBar';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ScrollArrow from '../components/ScrollArrow';
 
 const Main = () => {
   const [showDealDetails, setShowDealDetails] = useState(false);
@@ -65,6 +66,11 @@ const Main = () => {
               Every conversation, every document, every insight becomes permanent knowledge.
               Aarre Intelligence gets smarter with every interaction.
             </p>
+
+            {/* Scroll Arrow */}
+            <div className="mt-8">
+              <ScrollArrow targetId="personalities" />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -114,6 +120,11 @@ const Main = () => {
                 <p className="text-xs text-gray-600">Serves as you want</p>
               </motion.div>
             </div>
+
+            {/* Scroll Arrow */}
+            <div className="mt-8">
+              <ScrollArrow targetId="empathetic" />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -138,6 +149,11 @@ const Main = () => {
               Aarre Intelligence understands context, anticipates needs, and provides solutions—not just answers.
               It's like having a caring team member who actually helps.
             </p>
+
+            {/* Scroll Arrow */}
+            <div className="mt-8">
+              <ScrollArrow targetId="results" />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -320,6 +336,11 @@ const Main = () => {
                   )}
                 </AnimatePresence>
               </motion.div>
+            </div>
+
+            {/* Scroll Arrow */}
+            <div className="mt-12">
+              <ScrollArrow targetId="around" />
             </div>
           </motion.div>
         </div>

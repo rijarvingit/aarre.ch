@@ -2,10 +2,13 @@ import { motion } from 'framer-motion';
 import { Lock, CheckCircle2, ArrowRight, Sparkles, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ProgressBar from '../components/ProgressBar';
+import Header from '../components/Header';
+import ScrollArrow from '../components/ScrollArrow';
 
 const Landing = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden relative">
+      <Header />
       <ProgressBar />
       {/* Subtle rainbow gradient - Soft pastel colors */}
       <motion.div
@@ -48,7 +51,7 @@ const Landing = () => {
       </div>
 
       {/* Hero Section - More Spacious */}
-      <div className="relative min-h-screen flex items-center justify-center px-6 py-20">
+      <div className="relative min-h-screen flex items-center justify-center px-6 py-20 pt-32">
         <div className="max-w-4xl mx-auto text-center">
           {/* Animated AI Logo - Smaller & Elegant */}
           <motion.div
@@ -119,6 +122,16 @@ const Landing = () => {
               Help Your Company Grow Faster
             </span>
           </motion.h1>
+
+          {/* Scroll Arrow */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.8 }}
+            className="mb-12"
+          >
+            <ScrollArrow />
+          </motion.div>
 
           {/* Swiss Branding - More Visible */}
           <motion.p

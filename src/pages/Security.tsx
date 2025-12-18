@@ -3,6 +3,7 @@ import { Shield, Home, Lock, FileCheck, Eye, ArrowRight } from 'lucide-react';
 import ProgressBar from '../components/ProgressBar';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ScrollArrow from '../components/ScrollArrow';
 
 const Security = () => {
   return (
@@ -60,6 +61,11 @@ const Security = () => {
               Built in Switzerland, engineered for absolute data sovereignty.
               Your data never leaves your control.
             </p>
+
+            {/* Scroll Arrow */}
+            <div className="mt-8">
+              <ScrollArrow targetId="sovereignty" />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -120,6 +126,11 @@ const Security = () => {
                   Perfect for banks, healthcare, or anyone serious about data isolation.
                 </p>
               </motion.div>
+            </div>
+
+            {/* Scroll Arrow */}
+            <div className="mt-8">
+              <ScrollArrow targetId="encryption" />
             </div>
           </motion.div>
         </div>
@@ -182,6 +193,11 @@ const Security = () => {
                 </p>
               </motion.div>
             </div>
+
+            {/* Scroll Arrow */}
+            <div className="mt-8">
+              <ScrollArrow targetId="zerotrust" />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -242,6 +258,11 @@ const Security = () => {
                   Blocked before the first row. Security isn't reactive, it's predictive.
                 </p>
               </motion.div>
+            </div>
+
+            {/* Scroll Arrow */}
+            <div className="mt-8">
+              <ScrollArrow targetId="audit" />
             </div>
           </motion.div>
         </div>

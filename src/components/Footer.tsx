@@ -28,11 +28,10 @@ const Footer = () => {
               Partnerships
             </Link>
             <a
-              onClick={(e) => { e.preventDefault(); const url = window.location.origin + '/tenants/aarredigital/vanilla/gate.html'; window.location.href = url; }}
-              href="#"
+              href="https://aarre.ch/tenants/aarredigital/vanilla/gate.html"
               className="text-xs text-orange-600 hover:text-orange-700 font-semibold transition-colors cursor-pointer"
             >
-              Token Access
+              Demo Access
             </a>
           </div>
         </div>

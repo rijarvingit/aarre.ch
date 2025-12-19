@@ -3,52 +3,18 @@ import { Lock, CheckCircle2, ArrowRight, Sparkles, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ProgressBar from '../components/ProgressBar';
 import Header from '../components/Header';
-import ScrollArrow from '../components/ScrollArrow';
+import Footer from '../components/Footer';
 
 const Landing = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 overflow-hidden relative">
+    <div className="min-h-screen bg-gradient-to-b from-orange-100 via-orange-50 to-white overflow-hidden relative">
       <Header />
       <ProgressBar />
-      {/* Subtle rainbow gradient - Soft pastel colors */}
-      <motion.div
-        className="absolute inset-0 opacity-10 pointer-events-none"
-        style={{
-          background: 'linear-gradient(135deg, #FFE5E5, #E5E5FF, #E5F5FF, #E5FFE5, #FFE5E5)',
-          backgroundSize: '300% 300%',
-        }}
-        animate={{
-          backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: 'linear',
-        }}
-      />
-
-      {/* Minimal background particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-px h-px bg-red-400/30 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -15, 0],
-              opacity: [0.2, 0.5, 0.2],
-            }}
-            transition={{
-              duration: 5 + Math.random() * 3,
-              repeat: Infinity,
-              delay: Math.random() * 3,
-            }}
-          />
-        ))}
-      </div>
+      {/* Orange gradient overlay */}
+      <div className="absolute inset-0 pointer-events-none" style={{
+        background: 'linear-gradient(180deg, rgba(251, 146, 60, 0.15) 0%, rgba(251, 146, 60, 0.05) 50%, rgba(255, 255, 255, 0) 100%)',
+        zIndex: 0
+      }} />
 
       {/* Hero Section - More Spacious */}
       <div className="relative min-h-screen flex items-center justify-center px-6 py-20 pt-32">
@@ -123,27 +89,6 @@ const Landing = () => {
             </span>
           </motion.h1>
 
-          {/* Scroll Arrow */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.8 }}
-            className="mb-12"
-          >
-            <ScrollArrow />
-          </motion.div>
-
-          {/* Swiss Branding - More Visible */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
-            className="text-sm text-gray-600 mb-16 flex items-center justify-center gap-2"
-          >
-            <span className="text-red-500">🇨🇭</span>
-            <span><span className="text-gray-900 font-semibold">Aarre Intelligence</span> by Aarre GmbH, Switzerland</span>
-          </motion.p>
-
           {/* 3 Key Points - Spacious */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -198,66 +143,11 @@ const Landing = () => {
               </motion.button>
             </Link>
           </motion.div>
-
-          {/* Scroll indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1 }}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2"
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center"
-            >
-              <motion.div
-                animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="w-1.5 h-1.5 bg-gray-500 rounded-full mt-2"
-              />
-            </motion.div>
-          </motion.div>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="relative border-t border-gray-200 py-12 px-6 bg-white/80 backdrop-blur-sm">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            {/* Left: Branding */}
-            <div className="text-center md:text-left">
-              <p className="text-sm text-gray-600 flex items-center gap-2 justify-center md:justify-start">
-                <span className="text-red-500">🇨🇭</span>
-                <span className="text-gray-900 font-semibold">Aarre Intelligence</span> by Aarre GmbH, Switzerland
-              </p>
-            </div>
-
-            {/* Right: Links */}
-            <div className="flex gap-6">
-              <Link
-                to="/contact"
-                className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                Contact
-              </Link>
-              <Link
-                to="/partnerships"
-                className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                Partnerships
-              </Link>
-              <a
-                onClick={(e) => { e.preventDefault(); const url = window.location.origin + '/tenants/aarredigital/vanilla/'; window.location.href = url; }}
-                href="#"
-                className="text-sm text-red-600 hover:text-red-700 font-semibold transition-colors cursor-pointer"
-              >
-                Demo Access
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

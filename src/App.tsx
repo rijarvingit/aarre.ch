@@ -5,6 +5,7 @@ import Technology from './pages/Technology';
 import Security from './pages/Security';
 import Partnerships from './pages/Partnerships';
 import Contact from './pages/Contact';
+import ThankYou from './pages/ThankYou';
 import ScrollToTop from './components/ScrollToTop';
 import CookieConsent from './components/CookieConsent';
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/security" element={<Security />} />
         <Route path="/partnerships" element={<Partnerships />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/thank-you" element={<ThankYou />} />
       </Routes>
     </Router>
   );

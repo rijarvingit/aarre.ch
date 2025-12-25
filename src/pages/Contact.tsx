@@ -189,7 +189,7 @@ const Contact = () => {
               >
                 {/* FormSubmit Configuration */}
                 <input type="hidden" name="_subject" value="New contact from Aarre Intelligence website" />
-                <input type="hidden" name="_next" value="https://aarre.ch/thank-you" />
+                <input type="hidden" name="_next" value="https://aarre.ch/#/thank-you" />
                 <input type="hidden" name="_captcha" value="true" />
                 <input type="hidden" name="_template" value="table" />
                 <input type="hidden" name="_autoresponse" value="Thank you for your message! We'll get back to you soon." />

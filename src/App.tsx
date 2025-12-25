@@ -6,11 +6,13 @@ import Security from './pages/Security';
 import Partnerships from './pages/Partnerships';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
+import CookieConsent from './components/CookieConsent';
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
+      <CookieConsent />
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/main" element={<Main />} />
